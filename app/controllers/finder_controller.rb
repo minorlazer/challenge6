@@ -8,6 +8,6 @@ class FinderController < ApplicationController
   end
 
   def missing_email
-    @missing_email = Customer.where(email: nil)
+    @missing_email = Customer.where("email is null OR email = ''")
   end
 end
