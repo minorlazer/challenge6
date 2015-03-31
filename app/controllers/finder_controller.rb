@@ -6,4 +6,8 @@ class FinderController < ApplicationController
   def alphabetize
     @alpha = Customer.order('full_name ASC')
   end
+
+  def missing_email
+    @missing_email = Customer.where(email: nil)
+  end
 end
