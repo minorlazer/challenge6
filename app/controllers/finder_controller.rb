@@ -1,6 +1,7 @@
 class FinderController < ApplicationController
   def index
     @customers = Customer.all
+    @provinces_for_select = Province.provinces_for_select
   end
 
   def alphabetize
